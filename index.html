@@ -7,28 +7,18 @@
 	<script src="js/diasemana.js"></script>
 </head>
 <body>
-	<div class="container" align="center">
-		<table table class="table table-hover" style="width:auto">
-			<tr> <th colspan="2"> <p>Números primos</p></th></tr>
-			<script> 
-				var x=prompt("Escribe un número igual o mayor a 1"); //pedimos un numero
-				var y=1;
-				while (x<=0 && y<3) {
-					x=prompt("¡CUIDADO! el número no es igual o mayor a 1"); //nos aseguramos de que el numero sea mayor que 1					
-					y++;
-				} 
-				if (x<=0) {
-					document.write ("<h1> ¡Fin del Juego! </h1>"); //si nos equivocamos 3 veces, se acaba el juego
-				}
-				if (x>0) {
-					for (var i=1; i<x; i++) {
-						if (esprimo(i)) {
-							document.write("<tr><td>"+i+" es primer.</td></tr>");
-						} 
-					}
-					  	//formamos la tabla con el numero introducido
-				}
-			</script>
+    <div>
+        <script> 
+            var fecha= { //pedimos la fecha
+                dia: prompt ("introduce un día"),
+                mes: prompt ("introduce un mes"),
+                año: prompt ("introduce un año entre 1700 y 2299")
+            }
+            comprobarfecha(fecha);
+            for (i in fecha) {
+                document.writeln(fecha[i]);
+            }
+	    </script>
 		</table>
 	</div>
 </body>
