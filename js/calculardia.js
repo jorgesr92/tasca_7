@@ -32,28 +32,8 @@ function calculardia(x) {
     } else {
         C=0;
     }
-    var D;
-    if (x.mes==1 || x.mes==10) {
-        D=6;
-    }
-    if (x.mes==2 || x.mes==3 || x.mes==11) {
-        D=2;
-    }
-    if (x.mes==4 || x.mes==7) {
-        D=5;
-    }
-    if (x.mes==5) {
-        D=0;
-    }
-    if (x.mes==6) {
-        D=3;
-    }
-    if (x.mes==8) {
-        D=1;
-    }
-    if (x.mes==9 || x.mes==12) {
-        D=4;
-    }
+    var mes=[6,2,2,5,0,3,5,1,4,6,2,4];
+    var D=mes[fecha.mes-1];
     var E=x.dia;
     resultado=A+B+C+D+parseInt(E);
     resultado= resultado%7;
