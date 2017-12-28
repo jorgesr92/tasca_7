@@ -24,4 +24,4 @@ function comprobarfecha(x) {
         document.write ("<h1> ¡Fin del Juego! </h1>"); //si nos equivocamos 3 veces, se acaba el juego
     }
     return x;
-}
+    }
