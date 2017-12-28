@@ -27,7 +27,7 @@ function comprobarfecha(x) {
             y++;
         }
     } 
-    if (x.dia<=0 || x.dia>A) {
+    if (x.dia<=0 || x.dia>A && y==3) {
         document.write ("<h1> ¡Fin del Juego! </h1>"); //si nos equivocamos 3 veces, se acaba el juego
     } 
     y=1;

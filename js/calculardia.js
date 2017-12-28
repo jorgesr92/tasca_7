@@ -20,7 +20,6 @@ function calculardia(x) {
     }
     var B;
     B=parseInt(x.año.substr(2,2))+Math.trunc(x.año.substr(2,2)/4);
-    //B=x.año.Substr(2,2)/Math.trunc(x.año/4);
     var C, y, z;
     if (x.año.substr(2,2)!=00) {
         y=x.año.substr(2,2)%4;
