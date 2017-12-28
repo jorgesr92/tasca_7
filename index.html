@@ -9,7 +9,6 @@
 </head>
 <body>
     <div>
-        <p id="demo"></p>
         <script> 
             var resultado=0;
             var fecha= { //pedimos la fecha
@@ -24,11 +23,7 @@
             }
             var semana=["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"];
             calculardia(fecha);
-            document.getElementById("demo").innerHTML=semana[resultado];
-            //document.writeln(fecha.año.substr(2,2)/4);
-            //B=parseInt(fecha.año.substr(2,2))+Math.trunc(fecha.año.substr(2,2)/4);
-            //document.writeln(resultado);
-
+            document.writeln(semana[resultado]);
         </script>
 		</table>
 	</div>
