@@ -2,15 +2,26 @@
 <html>
 <head>
 	<title>Práctica 7</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">	
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/diseño.css"/>    
     <script src="js/diasemana.js"></script>
     <script src="js/calculardia.js"></script>
+    <script src="js/pedirfecha.js"></script>
+    <script src="js/boton.js"></script>
 </head>
 <body>
+    <div id="titulo">
+        <h1> Calculamos el día de la semana de la fecha que introduzcas</h1>
+    </div>
+    <div id="botón"> 
+        <p> 
+            <button type="button"> <a href=index.html>Volver a empezar</a></button>
+            
+        </p>
+    </div>
     <div>
         <script> 
-            var resultado=0;
+            var resultado;
             var fecha= { //pedimos la fecha
                 dia: prompt ("introduce un día"),
                 mes: prompt ("introduce un mes"),
@@ -18,13 +29,12 @@
             }
 
             comprobarfecha(fecha); //comprobamos que los digitos introducidos indican una fecha correcta
-            for (i in fecha) {
-                document.writeln(fecha[i]);
-            }
-            var semana=["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"];
+            //for (i in fecha) {
+                //document.writeln(fecha[i]);
+            //}
+            var semana=["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
             calculardia(fecha);
-            document.writeln("-->La fecha que has puesto es el dia: "+semana[resultado]);
+            document.writeln("La fecha "+fecha.dia+"/"+fecha.mes+"/"+fecha.año+" que has puesto es el día: <h1>"+semana[resultado]+"</h1>");
         </script>
-		</table>
 	</div>
 </body>
