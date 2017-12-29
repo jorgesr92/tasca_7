@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="css/diseño.css"/>    
     <script src="js/diasemana.js"></script>
     <script src="js/calculardia.js"></script>
-    <script src="js/pedirfecha.js"></script>
     <script src="js/boton.js"></script>
 </head>
 <body>
@@ -34,7 +33,7 @@
             //}
             var semana=["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
             calculardia(fecha);
-            document.writeln("La fecha "+fecha.dia+"/"+fecha.mes+"/"+fecha.año+" que has puesto es el día: <h1>"+semana[resultado]+"</h1>");
+            document.writeln("<p>La fecha "+fecha.dia+"/"+fecha.mes+"/"+fecha.año+" que has puesto es el día:</p> <h1>"+semana[resultado]+"</h1>");
         </script>
 	</div>
 </body>
