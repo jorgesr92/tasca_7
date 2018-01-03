@@ -13,7 +13,7 @@
     <div id="titulo">
         <h1> Calculamos el día de la semana de la fecha que introduzcas</h1>
     </div>
-    <div id="botón"> 
+    <div id="botón"> <!-- botón para poder riniciar el programa y volver a caluclar un día -->
         <p> 
             <a href=index.html class="btn btn-default btn-lg active" role="button">Volver a empezar</a>
             
@@ -22,19 +22,18 @@
     <div>
         <script> 
             var resultado;
-            var fecha= { //pedimos la fecha
-                dia: prompt ("introduce un día"),
-                mes: prompt ("introduce un mes"),
-                año: prompt ("introduce un año entre 1700 y 2299")
+            var fecha= { //pedimos la fecha por medio de cuadro de dialogo
+                dia: prompt ("Calculamos el día de la semana de la fecha que introduzcas. Primero introduce un día"),
+                mes: prompt ("Ahora introduce un mes"),
+                año: prompt ("Para acabar introduce un año comprendido entre 1700 y 2299")
             }
 
-            comprobarfecha(fecha); //comprobamos que los digitos introducidos indican una fecha correcta
-            //for (i in fecha) {
-                //document.writeln(fecha[i]);
-            //}
+            comprobarfecha(fecha); //comprobamos que los digitos introducidos indican una fecha correcta para que no hayan errores con la predicción del dia
+  
             var semana=["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
-            calculardia(fecha);
-            document.writeln("<p>La fecha "+fecha.dia+"/"+fecha.mes+"/"+fecha.año+" que has puesto es el día:</p> <h1>"+semana[resultado]+"</h1>");
+            var mes=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]; //meses
+            calculardia(fecha); //funcion creada con el algoritmo del cálculo del dia
+            document.writeln("<p>La fecha que has introducido: "+fecha.dia+" de "+mes[fecha.mes-1]+" de "+fecha.año+", es el día:</p> <h1>"+semana[resultado]+"</h1>");
         </script>
 	</div>
 </body>

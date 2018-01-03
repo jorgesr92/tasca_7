@@ -1,6 +1,6 @@
 function comprobarfecha(x) {
     var y=1;
-    var C, r, z; //año bisisesto
+    var C, r, z; // calculo del año bisisesto
     if (x.año.substr(2,2)!=00) {
         r=x.año.substr(2,2)%4;
     } else {
@@ -11,11 +11,12 @@ function comprobarfecha(x) {
     } else {
         C=0;
     }
-    var mes1=[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; //dias del mes
+    var mes2=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]; //meses
+    var mes1=[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; //dias que tiene el mes introducido
     var A=mes1[x.mes-1];
     if (x.mes==2 && C==-1) {
         while ((x.dia<=0 || x.dia>29) && y<3) {
-            x.dia=prompt("¡CUIDADO año bisiesto! introduce un dia (del 1 al 29)"); //nos aseguramos de que el numero sea correcto				
+            x.dia=prompt("¡CUIDADO el año introducido: "+x.año+ ", Es bisiesto! introduce un día entre el 1 y el 29)"); //nos aseguramos de que el numero sea correcto				
             y++;
         }
         if (x.dia<=0 || x.dia>29) {
@@ -23,7 +24,7 @@ function comprobarfecha(x) {
         }
     } else {
         while ((x.dia<=0 || x.dia>A) && y<3) {
-            x.dia=prompt("¡CUIDADO! introduce un dia adecuado para el mes que has introducido"); //nos aseguramos de que el numero sea correcto				
+            x.dia=prompt("¡CUIDADO! introduce un día adecuado para el mes que has introducido: "+mes2[x.mes-1]+", del 1 al "+A); //nos aseguramos de que el numero sea correcto				
             y++;
         }
     } 
